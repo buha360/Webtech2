@@ -1,0 +1,43 @@
+<div class="sidenav" [ngClass]="{ 'sidenav-collapsed': collapsed }">
+   <div class="logo-container">
+      <button class="logo" (click)="toggleCollapse()">W</button>
+      <div
+         [class.fade-in]="collapsed"
+         [class.fade-out]="!collapsed"
+         class="logo-text"
+         [class.hidden]="!collapsed"
+      >
+         Portfolio
+      </div>
+
+      <button
+         class="btn-close"
+         [class.fade-in-close-button]="collapsed"
+         [class.fade-out]="!collapsed"
+         [class.hidden]="!collapsed"
+         (click)="closeSidenav()"
+      >
+         <i class="fal fa-times close-icon"></i>
+      </button>
+   </div>
+
+   <ul class="sidenav-nav">
+      <li class="sidenav-nav-item" *ngFor="let data of navData">
+         <a
+            class="sidenav-nav-link"
+            [routerLink]="[data.routeLink]"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+         >
+            <i class="sidenav-link-icon" [class]="data.icon"></i>
+            <span
+               [class.fade-in]="collapsed"
+               [class.fade-out]="!collapsed"
+               class="sidenav-link-text"
+               [class.hidden]="!collapsed"
+               >{{ data.label }}</span
+            >
+         </a>
+      </li>
+   </ul>
+</div>

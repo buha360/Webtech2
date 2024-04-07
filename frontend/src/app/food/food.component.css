@@ -1,0 +1,76 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.buttonCenterDiv {
+   display: flex;
+   justify-content: center;
+}
+
+form {
+   padding: 20px;
+   border-radius: 15px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   max-width: 500px;
+   width: 100%;
+   background: #fff;
+}
+
+form div {
+   margin-bottom: 10px;
+}
+
+form label {
+   display: block;
+   margin-bottom: 5px;
+}
+
+input[type="text"] {
+   width: 100%;
+   padding: 15px;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+   resize: none;
+}
+
+textarea {
+   width: 100%;
+   height: 10em;
+   padding: 15px;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+   resize: none;
+}
+
+button {
+   padding: 10px 20px;
+   border-radius: 5px;
+   border: none;
+   background-color: #007bff;
+   color: white;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: #0056b3;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   max-width: 600px; /* Növeld a maximális szélességet */
+   width: 100%; /* Ez biztosítja, hogy a szélessége alkalmazkodjon a szülő konténerhez */
+   margin: 20px 0; /* Növeld a felső és alsó margót */
+}
+
+li {
+   background-color: #f9f9f9;
+   margin-top: 15px; /* Növeld a margót az elemek között */
+   padding: 20px; /* Növeld a belső tér méretét */
+   border-radius: 10px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   font-size: 1.1em; /* Nagyobb betűméret az olvashatóság érdekében */
+}

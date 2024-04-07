@@ -1,0 +1,49 @@
+<div class="container">
+   <form (submit)="submitFood()">
+      <div>
+         <label for="uploader">Feltöltő neve:</label>
+         <input
+            type="text"
+            id="uploader"
+            [(ngModel)]="food.uploader"
+            name="uploader"
+            required
+         />
+      </div>
+      <div>
+         <label for="name">Étel neve:</label>
+         <input
+            type="text"
+            id="name"
+            [(ngModel)]="food.name"
+            name="name"
+            required
+         />
+      </div>
+      <div>
+         <label for="description">Leírás:</label>
+         <textarea
+            id="description"
+            [(ngModel)]="food.description"
+            name="description"
+            required
+         ></textarea>
+      </div>
+      <div class="buttonCenterDiv">
+         <button type="submit">Beküldés</button>
+      </div>
+   </form>
+
+   <ul>
+      <li *ngFor="let food of foods">
+         Név: {{ food.name }}, Leírás: {{ food.description }}, Feltöltő:
+         {{ food.uploader }}
+         <button
+            *ngIf="food.uploader === this.food.uploader"
+            (click)="deleteFood(food._id, this.food.uploader)"
+         >
+            X
+         </button>
+      </li>
+   </ul>
+</div>
